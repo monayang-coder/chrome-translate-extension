@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>翻译</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 300px;
+      padding: 15px;
+    }
+    textarea {
+      width: 100%;
+      height: 80px;
+      margin-bottom: 10px;
+      padding: 5px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    select {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%; /* Make button full width below selects */
+      font-size: 16px;
+      margin-top: 10px; /* Add some space above the button */
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #translationResult {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border: 1px solid #eee;
+      border-radius: 4px;
+      min-height: 50px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+<body>
+  <h3>简易翻译</h3>
+  <textarea id="inputText" placeholder="输入要翻译的文本或在页面上选中"></textarea>
+  <div class="controls">
+    <label for="fromLang">源语言:</label>
+    <select id="fromLang">
+      <option value="auto">自动检测</option>
+      <option value="zh">中文</option>
+      <option value="en">英文</option>
+      </select>
+    <label for="toLang">目标语言:</label>
+    <select id="toLang">
+      <option value="zh">中文</option>
+      <option value="en">英文</option>
+      </select>
+  </div>
+  <button id="translateButton">翻译</button>
+  <div id="translationResult"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
